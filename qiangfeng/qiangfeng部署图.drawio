@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="24.7.5" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.3" pages="4">
   <diagram name="Page-1" id="822b0af5-4adb-64df-f703-e8dfc1f81529">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -265,6 +265,35 @@
         </mxCell>
         <mxCell id="0TqFkSfh7GITFdAYP1A8-20" value="域名备注&lt;br&gt;小程序BFF服务可能会加前缀：&lt;b&gt;&lt;u&gt;qfassortment&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="U9QTnsyQGhCHoIQ6oHoL-1" vertex="1">
           <mxGeometry x="-400" y="-150" width="253" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="GDjmmE1QUrcgp1Dy83Mj" name="支付方式">
+    <mxGraphModel dx="2261" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-5" value="orders" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="80" width="260" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-6" value="partner_id 商户号&lt;br&gt;order_code 订单号&lt;br&gt;ext_order_code 桌台订单号&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;order_state&lt;/div&gt;&lt;div&gt;pay_type 线上/线下&lt;/div&gt;&lt;div&gt;pay_state 支付状态&lt;/div&gt;&lt;div&gt;pay_channel&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;订单&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;支付类型code&lt;/span&gt;&lt;/div&gt;&lt;div&gt;pay_channel_name&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;订单&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;支付类型名称&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;original_amount&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;订单&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;金额&lt;/span&gt;&lt;/div&gt;&lt;div&gt;final_amount 订单金额&lt;/div&gt;&lt;div&gt;settlement_amount 订单金额&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;real_income 实际收入&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="fUyZsxioqhAUxs5pSiPD-5">
+          <mxGeometry y="50" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;关键字&lt;/h1&gt;&lt;p&gt;&lt;b&gt;支付状态：&lt;/b&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: initial;&quot;&gt;1:未支付 2:已支付 3:已退款 4:部分退款&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;订单支付类型&lt;/b&gt;：一级支付类型 + 5:混合支付（多种支付）&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;b&gt;一级支付类型&lt;/b&gt;：&lt;span style=&quot;background-color: initial;&quot;&gt;1:微信 2:会员卡 3:积分 4:支付宝 6:其他 52-现金支付 53-三方券&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;二级支付类型code&lt;/b&gt;：来自支付方式的code（pos_paytype_config.code）&lt;/p&gt;&lt;p&gt;&lt;b&gt;二级支付类型name&lt;/b&gt;：&lt;span style=&quot;background-color: initial;&quot;&gt;来自支付方式的name (例：美团178双人餐)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;实际收入金额：根据POS支付类型配置获取&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;*暂时不支持真实三方券&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="320" y="50" width="640" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-9" value="order_pay" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="440" width="260" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-10" value="&lt;div&gt;partner_id 商户号&lt;br&gt;order_code 订单号&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;pay_channel 一级支付类型code&lt;/div&gt;&lt;div&gt;pay_channel_name 一级支付类型名称&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;pay_sub_type 二级业务类型code【套餐/代金券/输入金额】&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;pay_sub_type_name&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;pay_sub_channel 二级支付类型code&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;pay_sub_channel_name 二级支付类型名称&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;pay_amount 支付金额&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;real_income 实际收入金额（乘以张数）&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;coupon_num 抵扣券张数（默认1）&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="fUyZsxioqhAUxs5pSiPD-9">
+          <mxGeometry y="50" width="260" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-12" value="pos_paytype_config&lt;div&gt;POS支付类型&lt;/div&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="330" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="fUyZsxioqhAUxs5pSiPD-13" value="partner_id 商户号&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;code 支付类型编号&lt;/div&gt;&lt;div&gt;name 支付类型名称&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;busi_type 一级业务类型 0=常规 53=三方券&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;busi_item_type 二级业务类型&amp;nbsp;1=套餐 2=代金券 3=输入金额&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;amount_calc_type POS支付方式 1=取amount 2=用户输入&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;amount 抵扣金额&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;real_income 收入金额&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="fUyZsxioqhAUxs5pSiPD-12">
+          <mxGeometry y="50" width="330" height="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
